@@ -1,8 +1,28 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
 
 
 public class Commons {
 
+	public static ArrayList<String> readTextFileToArrayList(String path){
+		ArrayList<String> content = new ArrayList<>();
+		
+		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+		    String line;
+		    while ((line = br.readLine()) != null) {
+		       content.add(line);
+		    }
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return content;
+	}
+	
 	public static int[] randomNumbers(int quantity) {
 		int[] nums = new int[quantity];
 		for (int i = 0; i < quantity; i++) {
