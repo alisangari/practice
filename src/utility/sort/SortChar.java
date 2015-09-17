@@ -29,28 +29,22 @@ public class SortChar {
 		if (chars.length < 2) {
 			return str;
 		}
-		
+
 		int leftLen = (int) Math.ceil((double) chars.length / 2);
 		int rightLen = (int) Math.floor((double) chars.length / 2);
 		String leftArr = "";
 		String rightArr = "";
 		for (int i = 0; i < leftLen; i++) {
-			leftArr+= chars[i];
+			leftArr += chars[i];
 		}
 		for (int i = 0; i < rightLen; i++) {
-			rightArr+= chars[leftLen + i];
+			rightArr += chars[leftLen + i];
 		}
 
 		leftArr = mergeSort(leftArr);
 		rightArr = mergeSort(rightArr);
-//		String str2 = "";
 		String result = merge(leftArr, rightArr, chars);
 
-//		String result = "";
-//		for (int i = 0; i < chars.length - 1; i++) {
-//			result += chars[i];
-//		}
-		
 		return result;
 	}
 
@@ -63,7 +57,7 @@ public class SortChar {
 		rightArr = right.split("");
 		int i = 0, j = 0, k = 0;
 		while (i < leftLen && j < rightLen) {
-			if (leftArr[i].compareTo(rightArr[j])<=0) {
+			if (leftArr[i].compareTo(rightArr[j]) <= 0) {
 				str[k] = leftArr[i];
 				i++;
 			} else {
@@ -82,7 +76,7 @@ public class SortChar {
 			j++;
 			k++;
 		}
-		
+
 		String result = "";
 		for (int c = 0; c < str.length; c++) {
 			result += str[c];

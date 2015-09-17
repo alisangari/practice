@@ -14,8 +14,7 @@ public class SortInt {
 		}
 		return nums;
 	}
-	
-	
+
 	public static int[] mergeSort(int[] nums) {
 		// metge sort
 		// time complexity nlg(n)

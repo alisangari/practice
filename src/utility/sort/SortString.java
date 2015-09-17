@@ -5,7 +5,7 @@ public class SortString {
 	public static String[] selectionSort(String[] arr) {
 		for (int i = 0; i < arr.length - 1; i++) {
 			for (int j = i + 1; j < arr.length; j++) {
-				if (arr[j].compareTo(arr[i])<0) {
+				if (arr[j].compareTo(arr[i]) < 0) {
 					String t = arr[i];
 					arr[i] = arr[j];
 					arr[j] = t;
@@ -14,8 +14,7 @@ public class SortString {
 		}
 		return arr;
 	}
-	
-	
+
 	public static String[] mergeSort(String[] arr) {
 		// metge sort
 		// time complexity nlg(n)
@@ -40,12 +39,13 @@ public class SortString {
 		return arr;
 	}
 
-	private static String[] merge(String[] leftArr, String[] rightArr, String[] nums) {
+	private static String[] merge(String[] leftArr, String[] rightArr,
+			String[] nums) {
 		int leftLen = leftArr.length;
 		int rightLen = rightArr.length;
 		int i = 0, j = 0, k = 0;
 		while (i < leftLen && j < rightLen) {
-			if (leftArr[i].compareTo(rightArr[j])<=0) {
+			if (leftArr[i].compareTo(rightArr[j]) <= 0) {
 				nums[k] = leftArr[i];
 				i++;
 			} else {
