@@ -1,6 +1,6 @@
-package utility;
+package sort;
 
-public class SortString {
+public class SortChar {
 
 	public static String selectionSort(String str) {
 		String[] chars = new String[str.length()];

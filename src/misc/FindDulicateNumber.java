@@ -1,3 +1,4 @@
+package misc;
 public class FindDulicateNumber {
 
 	public static void main(String[] args) {

@@ -1,3 +1,4 @@
+package misc;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -75,4 +76,10 @@ public class Commons {
 		System.out.println("");
 	}
 
+	public static boolean isEmpty(String str) {
+		if (str != null && str.trim().length() > 0) {
+			return false;
+		}
+		return true;
+	}
 }

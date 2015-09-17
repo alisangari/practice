@@ -1,3 +1,4 @@
+package misc;
 import java.util.ArrayList;
 
 public class Anagram1 {
@@ -6,7 +7,7 @@ public class Anagram1 {
 		ArrayList<String> fileContent = Commons
 				.readTextFileToArrayList("src/Anagram1.txt");
 		for (String line : fileContent) {
-			System.out.println(line);
+//			System.out.println(line);
 		}
 		prep(fileContent);
 	}
@@ -38,13 +39,13 @@ public class Anagram1 {
 	}
 
 	private static String removeCotations(String str) {
-		str.replaceAll("\"", "");
-		System.out.println("******"+str);
+		str = str.replaceAll("\"", "");
 		return str;
 	}
 	
 	private static String removeWhiteSpace(String str) {
-		str.replaceAll("\\s+", "");
+		str = str.replaceAll("\\s+", "");
+		str = str.trim();
 		return str;
 	}
 
