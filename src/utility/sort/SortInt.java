@@ -1,4 +1,4 @@
-package sort;
+package utility.sort;
 
 public class SortInt {
 

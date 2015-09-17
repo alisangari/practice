@@ -1,43 +1,43 @@
-package sort;
+package utility.sort;
 
 public class SortString {
 
-	public static String[] selectionSort(String[] nums) {
-		for (int i = 0; i < nums.length - 1; i++) {
-			for (int j = i + 1; j < nums.length; j++) {
-				if (nums[j].compareTo(nums[i])<0) {
-					String t = nums[i];
-					nums[i] = nums[j];
-					nums[j] = t;
+	public static String[] selectionSort(String[] arr) {
+		for (int i = 0; i < arr.length - 1; i++) {
+			for (int j = i + 1; j < arr.length; j++) {
+				if (arr[j].compareTo(arr[i])<0) {
+					String t = arr[i];
+					arr[i] = arr[j];
+					arr[j] = t;
 				}
 			}
 		}
-		return nums;
+		return arr;
 	}
 	
 	
-	public static String[] mergeSort(String[] nums) {
+	public static String[] mergeSort(String[] arr) {
 		// metge sort
 		// time complexity nlg(n)
-		if (nums.length < 2) {
-			return nums;
+		if (arr.length < 2) {
+			return arr;
 		}
-		int leftLen = (int) Math.ceil((double) nums.length / 2);
-		int rightLen = (int) Math.floor((double) nums.length / 2);
+		int leftLen = (int) Math.ceil((double) arr.length / 2);
+		int rightLen = (int) Math.floor((double) arr.length / 2);
 		String[] leftArr = new String[leftLen];
 		String[] rightArr = new String[rightLen];
 		for (int i = 0; i < leftLen; i++) {
-			leftArr[i] = nums[i];
+			leftArr[i] = arr[i];
 		}
 		for (int i = 0; i < rightLen; i++) {
-			rightArr[i] = nums[leftLen + i];
+			rightArr[i] = arr[leftLen + i];
 		}
 
 		mergeSort(leftArr);
 		mergeSort(rightArr);
-		nums = merge(leftArr, rightArr, nums);
+		arr = merge(leftArr, rightArr, arr);
 
-		return nums;
+		return arr;
 	}
 
 	private static String[] merge(String[] leftArr, String[] rightArr, String[] nums) {

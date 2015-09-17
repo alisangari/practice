@@ -1,7 +1,7 @@
-package sorttest;
+package test.sorttest;
 
-import sort.SortChar;
-import sort.SortString;
+import utility.sort.SortString;
+
 
 public class SortStringTest {
 

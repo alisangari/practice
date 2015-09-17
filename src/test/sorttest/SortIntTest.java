@@ -1,7 +1,7 @@
-package sorttest;
+package test.sorttest;
 
+import utility.sort.SortInt;
 import misc.Commons;
-import sort.SortInt;
 
 public class SortIntTest {
 

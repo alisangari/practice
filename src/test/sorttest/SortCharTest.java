@@ -1,6 +1,7 @@
-package sorttest;
+package test.sorttest;
 
-import sort.SortChar;
+import utility.sort.SortChar;
+
 
 public class SortCharTest {
 
