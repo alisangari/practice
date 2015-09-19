@@ -1,4 +1,4 @@
-package test.searchtest;
+package utilitydemo.searchtest;
 
 import java.util.ArrayList;
 

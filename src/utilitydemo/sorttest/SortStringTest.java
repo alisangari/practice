@@ -1,4 +1,4 @@
-package test.sorttest;
+package utilitydemo.sorttest;
 
 import utility.sort.SortString;
 
