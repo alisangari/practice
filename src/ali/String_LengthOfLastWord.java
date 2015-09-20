@@ -1,4 +1,4 @@
-package misc;
+package ali;
 
 public class String_LengthOfLastWord {
 	// Given a string s consists of upper/lower-case alphabets and empty space

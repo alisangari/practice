@@ -1,8 +1,8 @@
-package utilitydemo.searchtest;
+package utility.search.demo;
 
 import utility.search.SearchChar;
 
-public class SearchCharTest {
+public class SearchCharDemo {
 
 	public static void main(String[] args) {
 		String[] arr = { "ali", "Ali", "Mojlili", "Leon" };

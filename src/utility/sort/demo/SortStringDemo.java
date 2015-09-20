@@ -1,9 +1,9 @@
-package utilitydemo.sorttest;
+package utility.sort.demo;
 
 import utility.sort.SortString;
 
 
-public class SortStringTest {
+public class SortStringDemo {
 
 	public static void main(String[] args) {
 		String[] str = {"ali", "Ali", "Leon", "Moji"};

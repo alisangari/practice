@@ -1,11 +1,11 @@
-package misc;
+package ali;
 import java.util.ArrayList;
 
 public class Anagram1 {
 	public static void main(String[] args) {
 
 		ArrayList<String> fileContent = Commons
-				.readTextFileToArrayList("src/Anagram1.txt");
+				.readTextFileToArrayList("files/Anagram1.txt");
 		for (String line : fileContent) {
 //			System.out.println(line);
 		}

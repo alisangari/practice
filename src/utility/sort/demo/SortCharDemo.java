@@ -1,9 +1,9 @@
-package utilitydemo.sorttest;
+package utility.sort.demo;
 
 import utility.sort.SortChar;
 
 
-public class SortCharTest {
+public class SortCharDemo {
 
 	public static void main(String[] args) {
 		String str = "ASFGdfRWEWdfEGsdfgDSA";

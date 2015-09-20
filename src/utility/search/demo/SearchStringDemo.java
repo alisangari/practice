@@ -1,10 +1,10 @@
-package utilitydemo.searchtest;
+package utility.search.demo;
 
 import java.util.ArrayList;
 
 import utility.search.SearchString;
 
-public class SearchStringTest {
+public class SearchStringDemo {
 
 	public static void main(String[] args){
 		String[] nums = {"ali","Ali","Moji","Leon"};

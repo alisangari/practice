@@ -1,9 +1,9 @@
-package utilitydemo.sorttest;
+package utility.sort.demo;
 
+import ali.Commons;
 import utility.sort.SortInt;
-import misc.Commons;
 
-public class SortIntTest {
+public class SortIntDemo {
 
 	public static void main(String[] args) {
 		long t1, deltaTime;

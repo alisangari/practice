@@ -1,4 +1,4 @@
-package misc;
+package ali;
 public class PeakFinder {
 
 	public static void main(String[] args) {

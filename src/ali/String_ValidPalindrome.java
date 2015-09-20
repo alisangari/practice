@@ -1,4 +1,4 @@
-package misc;
+package ali;
 
 public class String_ValidPalindrome {
 

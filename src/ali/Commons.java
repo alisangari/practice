@@ -1,4 +1,4 @@
-package misc;
+package ali;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

@@ -1,10 +1,10 @@
-package utilitydemo.searchtest;
+package utility.search.demo;
 
-import misc.Commons;
+import ali.Commons;
 import utility.search.SearchInt;
 import utility.sort.SortInt;
 
-public class SearchIntTest {
+public class SearchIntDemo {
 
 	public static void main(String[] args){
 		int[] nums = Commons.randomNumbers(10, 20,30);
