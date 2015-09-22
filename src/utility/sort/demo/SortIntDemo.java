@@ -18,6 +18,11 @@ public class SortIntDemo {
 		printResult("Selection Sort", deltaTime, sort1);
 
 		t1 = System.currentTimeMillis();
+		int[] sort1reversed = SortInt.reversedSelectionSort(nums);
+		deltaTime = System.currentTimeMillis() - t1;
+		printResult("Reversed Selection Sort", deltaTime, sort1reversed);
+
+		t1 = System.currentTimeMillis();
 		int[] sort2 = SortInt.mergeSort(nums);
 		deltaTime = System.currentTimeMillis() - t1;
 		printResult("Merge Sort", deltaTime, sort2);

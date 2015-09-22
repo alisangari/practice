@@ -2,7 +2,7 @@ package utility.sort;
 
 public class SortInt {
 
-	public static int[] selectionSort(int[] nums) {
+	public static int[] selectionSort(int[] nums) {// the name might not be correct
 		for (int i = 0; i < nums.length - 1; i++) {
 			for (int j = i + 1; j < nums.length; j++) {
 				if (nums[j] < nums[i]) {
@@ -15,6 +15,21 @@ public class SortInt {
 		return nums;
 	}
 
+	
+	public static int[] reversedSelectionSort(int[] nums) {// the name might not be correct
+		for (int i = 0; i < nums.length - 1; i++) {
+			for (int j = i + 1; j < nums.length; j++) {
+				if (nums[j] > nums[i]) {
+					int t = nums[i];
+					nums[i] = nums[j];
+					nums[j] = t;
+				}
+			}
+		}
+		return nums;
+	}
+
+	
 	public static int[] mergeSort(int[] nums) {
 		// metge sort
 		// time complexity nlg(n)
