@@ -1,3 +1,6 @@
+"Calculate", "Acute Call"
+"Drop Cue" , "Cued Pro"
+"carE Not", "raCe On"
 "One-Microsoft", "one-Microsoft"
 "Aaagmnrs", "anagrams"
 "Substitute Focal Awe", "Associate But Flu Wet"
