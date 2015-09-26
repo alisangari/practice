@@ -5,37 +5,33 @@ import javax.xml.bind.DatatypeConverter;
 
 public class CharToHex {
 	
-	public static String charTOHex(char a){
+	public static String hexToChar(String hexString){
 		
-		String string = a+"";
-		int no = Integer.parseInt(string);
-		String hex = Integer.toHexString(no);
-		System.out.println("Hex value is " + hex);
-			
-		return hex;
-	}
-	
-	public static void charToHex(String s){
-		 //print hex string version of HELLO WORLD
-		 byte[] helloBytes = s.getBytes();
-		 String helloHex = DatatypeConverter.printHexBinary(helloBytes);
-		 System.out.printf("Hello hex: 0x%s\n", helloHex);
-		 
-		 //convert hex-encoded string back to original string
-		 byte[] decodedHex = DatatypeConverter.parseHexBinary(helloHex);
-		 String decodedString;
+		//convert hex-encoded string back to original string
+		byte[] decodedHex = DatatypeConverter.parseHexBinary(hexString);
+		String decodedString="";
 		try {
 			decodedString = new String(decodedHex, "UTF-8");
-			 System.out.printf("Hello decoded : %s\n", decodedString);
+			 System.out.printf(hexString+" decoded : %s\n", decodedString);
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-
+			
+		return decodedString;
+	}
+	
+	public static String charToHex(String string){
+		 byte[] stringBytes = string.getBytes();
+		 String hexString = DatatypeConverter.printHexBinary(stringBytes);
+		 System.out.printf(string+" hex: 0x%s\n", hexString);
+		 
+		 return hexString;
 	}
 	   
 	public static void main(String argv[]){
-		//System.out.println("ø hex="+charTOHex('ø'));
-		charToHex("ø");
+		
+		String hex = charToHex("ø");
+		hexToChar(hex);
 
 	}
 }
