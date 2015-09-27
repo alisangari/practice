@@ -1,35 +1,24 @@
 package moji;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import utility.sort.SortString;
-
 public class GFinder {
 	public static void main(String[] args) {
-		List<String> mySet = Arrays.asList("A", "B", "A", "C");
-		List<List<String>> lst = getSubset(mySet);
-		List<String> result = new ArrayList<>();
-		for (List<String> list : lst) {
-			String tmp = "";
-			for (String str : list) {
-				tmp += str;
-			}
-			if (!tmp.equals(""))
-				result.add(tmp);
-		}
-		System.out.println(result);
+		String virus = "GCC";
+		String[] mut = mutations(virus);
+		Set<String> resultSet = sortedMutations(mut);
+		System.out.println(resultSet);
 	}
 
 	public static String[] mutations(String virus) {
-		List<String> mySet = setMaker(virus);
-		List<List<String>> lst = getSubset(mySet);
+		List<String> set = setMaker(virus);
+		List<List<String>> lst = getSubset(set);
 		String[] result = new String[(int) Math.pow(2, virus.length()) - 1];
+		int i = 0;
 		for (List<String> list : lst) {
-			int i = 0;
 			String tmp = "";
 			for (String str : list) {
 				tmp += str;
@@ -44,11 +33,15 @@ public class GFinder {
 
 	public static Set<String> sortedMutations(String[] mutations) {
 		Set<String> sorted_mutations = new HashSet<>();
-		String[] strs = SortString.selectionSort(mutations);
-		for (String str : strs) {
+		sort(mutations);
+		for (String str : mutations) {
 			sorted_mutations.add(str);
 		}
 		return sorted_mutations;
+	}
+
+	public static void sort(String[] mutations) {
+		// TODO
 	}
 
 	public static List<List<String>> getSubset(List<String> mySet) {
