@@ -30,7 +30,7 @@ public class CharToHex {
 	   
 	public static void main(String argv[]){
 		
-		String hex = charToHex("ø");
+		String hex = charToHex("🍚");
 		hexToChar(hex);
 
 	}
