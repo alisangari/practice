@@ -6,7 +6,7 @@ import java.nio.charset.*;
 class UnicodeCharacterToChars {
 //   static int[] unicodeList = {0x43, 0x2103, 0x1F132, 0x1F1A0, 
 //      0x20FFFF};
-   static int[] unicodeList = {'Ã©'};
+   static int[] unicodeList = {'Ã','©'};
    static char hexDigit[] = {'0', '1', '2', '3', '4', '5', '6', '7',
                              '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
    public static void main(String[] arg) {
