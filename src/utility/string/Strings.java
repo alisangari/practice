@@ -5,6 +5,16 @@ import java.util.regex.Matcher;
 
 public class Strings {
 
+	public static boolean isPalindromic(String str){
+		str = str.toLowerCase();
+		if (str.length() < 1) {
+			return true;
+		}
+		StringBuilder sb = new StringBuilder(str);
+		String str2 = sb.reverse().toString();
+		return str.equals(str2);
+	}
+	
 	public static String convertToHex(String str) {
 		try {
 			// byte[] b = str.getBytes(StandardCharsets.UTF_8);
