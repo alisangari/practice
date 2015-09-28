@@ -41,10 +41,10 @@ public class Array_RemoveDuplicatesFromSortedArray {
 				for(int j=c; j>=0; j--){
 					
 				}
-				if (indx > 0) {
-					nums[indx] = nums[i];
-					indx = i;
-				}
+//				if (indx > 0) {
+//					nums[indx] = nums[i];
+//					indx = i;
+//				}
 				prev = nums[i];
 			}
 		}

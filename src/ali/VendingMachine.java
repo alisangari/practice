@@ -205,13 +205,13 @@ public class VendingMachine {
 
 				else if (Strings.isDigit(actionItem.charAt(0))) {// number
 					if (itemNumber.length() > 0) {
-						if(isCombinationValid(itemLetter, itemNumber,
-								deposits, items, changeSlots))
-						groupedActions.add(groupItems(itemLetter, itemNumber,
-								deposits));
-						itemLetter = "";
-						itemNumber = "";
-						deposits = new ArrayList<String>();
+//						if(isCombinationValid(itemLetter, itemNumber,
+//								deposits, items, changeSlots))
+//						groupedActions.add(groupItems(itemLetter, itemNumber,
+//								deposits));
+//						itemLetter = "";
+//						itemNumber = "";
+//						deposits = new ArrayList<String>();
 					}
 					itemNumber = actionItem;
 				}

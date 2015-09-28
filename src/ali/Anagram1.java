@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 import utility.file.FileLineImport;
 import utility.sort.SortChar;
-import utility.string.StringClean;
+import utility.string.Strings;
 
 public class Anagram1 {
 	public static void main(String[] args) {
@@ -12,11 +12,11 @@ public class Anagram1 {
 		
 		for(String line: arrList){
 			String[] pair = line.split(",");
-			pair[0] = StringClean.removeSubString(pair[0], "\"");
-			pair[0] = StringClean.removeSubString(pair[0], "\\s+");
+			pair[0] = Strings.removeSubString(pair[0], "\"");
+			pair[0] = Strings.removeSubString(pair[0], "\\s+");
 			
-			pair[1] = StringClean.removeSubString(pair[1], "\"");
-			pair[1] = StringClean.removeSubString(pair[1], "\\s+");
+			pair[1] = Strings.removeSubString(pair[1], "\"");
+			pair[1] = Strings.removeSubString(pair[1], "\\s+");
 			
 			pair[0] = SortChar.selectionSort(pair[0].toLowerCase());
 			pair[1] = SortChar.selectionSort(pair[1].toLowerCase());

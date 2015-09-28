@@ -10,9 +10,6 @@ import java.util.TreeSet;
 public class SortString {
 
 	public static List<String> sortByLength(String[] arr) {
-		
-		
-		
 		Set<Integer> sortedSet = new TreeSet<Integer>(
 				new Comparator<Integer>() {
 					@Override

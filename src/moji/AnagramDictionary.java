@@ -6,9 +6,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import utility.file.FileGridImport;
-import utility.file.FileLineImport;
 import utility.sort.SortChar;
-import utility.string.StringClean;
+import utility.string.Strings;
 
 // Given an array of strings, group anagrams together.
 //
@@ -32,7 +31,7 @@ public class AnagramDictionary {
 	public static void getAnagrams(ArrayList<String> strs){
 		Map<String,ArrayList<String>> dictionary = new HashMap<>();
 		for (String str : strs) {
-			str = StringClean.removeSubString(str, "\\s+");
+			str = Strings.removeSubString(str, "\\s+");
 			String key = SortChar.selectionSort(str);
 			if(dictionary.get(key) != null){
 				dictionary.get(key).add(str);

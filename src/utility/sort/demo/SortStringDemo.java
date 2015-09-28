@@ -1,5 +1,7 @@
 package utility.sort.demo;
 
+import java.util.List;
+
 import utility.sort.SortString;
 
 
@@ -9,9 +11,11 @@ public class SortStringDemo {
 		String[] str = {"ali", "Ali", "Leon", "Moji"};
 		String[] sortedStr1 = SortString.selectionSort(str);
 		String[] sortedStr2 = SortString.mergeSort(str);
+		List<String> sortedByLen = SortString.sortByLength(str);
 		printResult("", 0, str);
 		printResult("", 0, sortedStr1);
 		printResult("", 0, sortedStr2);
+		System.out.println(sortedByLen);
 	}
 	
 	

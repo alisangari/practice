@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import utility.file.FileGridImport;
 import utility.sort.SortChar;
-import utility.string.StringClean;
+import utility.string.Strings;
 
 public class AnagramSample {
 	public static void main(String[] args) {
@@ -25,6 +25,6 @@ public class AnagramSample {
 		return false;
 	}
 	public static String getNormalized(String str){
-		return StringClean.removeSubString(str, "\\s+");
+		return Strings.removeSubString(str, "\\s+");
 	}
 }
