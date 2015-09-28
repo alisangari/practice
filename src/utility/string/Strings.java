@@ -1,9 +1,25 @@
 package utility.string;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.regex.Matcher;
 
 public class Strings {
+	
+	public static ArrayList<String> removeDuplicates(String[] strs){
+		Set<String> unique = new TreeSet<String>();
+		for(int i=0; i<strs.length; i++){
+			unique.add(strs[i]);
+		}
+		
+		ArrayList<String> res = new ArrayList<String>();
+		for(String str: unique){
+			res.add(str);
+		}
+		return res;
+	}
 
 	public static boolean isPalindromic(String str){
 		str = str.toLowerCase();

@@ -3,13 +3,12 @@ package utility.sort;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class SortString {
 
-	public static List<String> sortByLength(String[] arr) {
+	public static ArrayList<String> sortByLength(String[] arr) {
 		Set<Integer> sortedSet = new TreeSet<Integer>(
 				new Comparator<Integer>() {
 					@Override
@@ -33,7 +32,7 @@ public class SortString {
 			}
 		}
 		Set<String> set = new HashSet<String>();
-		List<String> result = new ArrayList<>();
+		ArrayList<String> result = new ArrayList<>();
 		for(String st : res){
 			if(!set.contains(st)){
 				set.add(st);
