@@ -2,9 +2,17 @@ package utility.string;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class StringSubSets {
-	
+
+	public static void main(String[] args) {
+		String str = "GCC";
+		String[] strs = getAllSubSets(str);
+		for (int i = 0; i < strs.length; i++) {
+			System.out.println(strs[i]);
+		}
+	}
 
 	public static String[] getAllSubSets(String virus) {
 		List<String> set = setMaker(virus);
