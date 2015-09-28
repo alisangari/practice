@@ -1,6 +1,50 @@
 package utility.sort;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
 public class SortString {
+
+	public static List<String> sortByLength(String[] arr) {
+		
+		
+		
+		Set<Integer> sortedSet = new TreeSet<Integer>(
+				new Comparator<Integer>() {
+					@Override
+					public int compare(Integer o1, Integer o2) {
+						return o2.compareTo(o1);
+					}
+				});
+		Set<Integer> sSet = new TreeSet<Integer>();
+		for (String str : arr) {
+			sSet.add(str.length());
+		}
+		sortedSet.addAll(sSet);
+
+		// String[] res = new String[arr.length];
+		ArrayList<String> res = new ArrayList<String>();
+		for (int len : sortedSet) {
+			for (int i = 0; i < arr.length; i++) {
+				if (arr[i].length() == len) {
+					res.add(arr[i]);
+				}
+			}
+		}
+		Set<String> set = new HashSet<String>();
+		List<String> result = new ArrayList<>();
+		for(String st : res){
+			if(!set.contains(st)){
+				set.add(st);
+				result.add(st);
+			}
+		}
+		return result;
+	}
 
 	public static String[] selectionSort(String[] arr) {
 		for (int i = 0; i < arr.length - 1; i++) {

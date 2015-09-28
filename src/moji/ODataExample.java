@@ -25,7 +25,7 @@ public class ODataExample {
 	// HTTP GET request
 	private void sendGet() throws Exception {
 
-		String url = "http://services.odata.org/Northwind/Northwind.svc/Products/$count?$filter=Discontinued eq true";
+		String url = "http://services.odata.org/Northwind/Northwind.svc/Products/$count?$filter=Discontinued%20eq%20true";
 		
 		URL obj = new URL(url);
 		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
