@@ -1,4 +1,5 @@
 package ali;
+
 public class LinkedList {
 	Node linkedList;
 
@@ -16,7 +17,8 @@ public class LinkedList {
 		list.remove(3);
 		System.out.println(list);
 
-		// insert(9, 2)
+		list.insert(9, 2);
+		System.out.println("insert: " + list);
 
 		LinkedList list2 = new LinkedList(4);
 		list2.append(8);
@@ -43,19 +45,19 @@ public class LinkedList {
 		int i3 = -1;
 		int startPoint = -1;
 		boolean flag = false;
-		while (list1.getHead()!=null) {
+		while (list1.getHead() != null) {
 			i1++;
 			i2 = -1;
-			while (list2.getHead()!=null) {
+			while (list2.getHead() != null) {
 				i2++;
 				if (get(i1) == externalList.get(i2)) {
 					startPoint = i1;
 					i3 = i1;
 					flag = true;
-					while(flag){
+					while (flag) {
 						i2++;
 						i3++;
-						if(get(i3) != externalList.get(i2)){
+						if (get(i3) != externalList.get(i2)) {
 							flag = false;
 							startPoint = -1;
 							break;
@@ -69,21 +71,10 @@ public class LinkedList {
 		return startPoint;
 	}
 
-	public void insert(int val, int indx) {// TODO
-	// //find node at index
-	// Node node = this.linkedList;
-	// int i = 0;
-	// while (node.getHead() != null) {
-	// i++;
-	// if (i == indx) {
-	// //make node point to a new node and the new node to node's prev head
-	//
-	// } else {
-	// node = node.getHead();
-	// }
-	// }
-	//
-	//
+	public void insert(int val, int atIndex) {
+		Node prevNode = getNodeAtIndex(atIndex - 1);
+		Node nextNode = prevNode.getHead();
+		prevNode.setHead(new Node(nextNode, val));
 	}
 
 	public void append(int val) {
@@ -124,6 +115,20 @@ public class LinkedList {
 			}
 		}
 		return val;
+	}
+
+	public Node getNodeAtIndex(int indx) {
+		Node node = this.linkedList;
+		int i = 0;
+		while (node.getHead() != null) {
+			i++;
+			if (i == indx) {
+				return node;
+			} else {
+				node = node.getHead();
+			}
+		}
+		return node;
 	}
 
 	public int find(int val) {
